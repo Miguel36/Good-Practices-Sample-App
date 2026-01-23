@@ -56,9 +56,13 @@ dependencies {
     //Material
     implementation(libs.androidx.material3)
     implementation(libs.androidx.material.icons.core)
+    implementation(libs.material)
 
     //Navigation
     implementation(libs.androidx.navigation.compose)
+
+    //Splash
+    implementation(libs.androidx.core.splashscreen)
 
     //Test
     testImplementation(libs.junit)

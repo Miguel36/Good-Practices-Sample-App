@@ -2,4 +2,14 @@
 <resources>
 
     <style name="Theme.GoodPracticesSampleApp" parent="android:Theme.Material.Light.NoActionBar" />
+
+    <style name="Theme.App.Splash" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/splash_background</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_splash</item>
+        <item name="postSplashScreenTheme">@style/Theme.App.Empty</item>
+    </style>
+
+    <style name="Theme.App.Empty"
+        parent="Theme.MaterialComponents.DayNight.NoActionBar" />
+
 </resources>

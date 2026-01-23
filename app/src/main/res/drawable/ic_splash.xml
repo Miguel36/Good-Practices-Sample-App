@@ -1,0 +1,77 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="288dp"
+    android:height="288dp"
+    android:viewportWidth="288"
+    android:viewportHeight="288">
+
+    <!-- Grupo principal -->
+    <group
+        android:scaleX="0.68"
+        android:scaleY="0.62"
+        android:translateX="46"
+        android:translateY="58">
+
+        <!-- 🅼 M más delgada -->
+        <group
+            android:scaleX="0.88"
+            android:translateX="18">
+
+            <path
+                android:fillColor="#000000"
+                android:pathData="
+                    M72,176
+                    L72,64
+                    L112,64
+                    L144,128
+                    L176,64
+                    L216,64
+                    L216,176
+                    L184,176
+                    L184,112
+                    L144,168
+                    L104,112
+                    L104,176
+                    Z" />
+        </group>
+
+        <!-- 🔥 FUEGOS -->
+        <group
+            android:translateY="32">
+
+            <!-- Fuego izquierdo (más cerca de la M) -->
+            <group android:translateX="12">
+                <path
+                    android:fillColor="#000000"
+                    android:pathData="
+                        M64,72
+                        C40,48 46,32 48,24
+
+                        M56,104
+                        C32,66 20,80 28,72
+                        C44,8 64,80 8,8
+                        Z" />
+            </group>
+
+            <!-- Fuego derecho (más cerca de la M) -->
+            <group android:translateX="-12">
+                <path
+                    android:fillColor="#000000"
+                    android:pathData="
+                        M224,72
+                        C248,48 252,32 280,24
+                        Z
+                        M232,104
+                        C256,96 268,90 260,7
+                        Z" />
+            </group>
+
+        </group>
+
+        <!-- Tres líneas -->
+        <path
+            android:fillColor="#000000"
+            android:pathData="M104,190 H184 V200 H104 Z" />
+
+    </group>
+
+</vector>
