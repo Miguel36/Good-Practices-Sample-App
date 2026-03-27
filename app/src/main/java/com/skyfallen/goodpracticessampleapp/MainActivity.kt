@@ -25,16 +25,16 @@ class MainActivity : ComponentActivity() {
         }
         enableEdgeToEdge()
         setContent {
-            AppNav()
+            GoodPracticesSampleAppTheme {
+                AppNav()
+            }
         }
     }
 
     @Composable
     private fun AppNav() {
-        GoodPracticesSampleAppTheme {
-            Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                Text(text = "Hola", modifier = Modifier.padding(innerPadding))
-            }
+        Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
+            Text(text = "Hola", modifier = Modifier.padding(innerPadding))
         }
     }
 }
