@@ -5,13 +5,9 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.activity.viewModels
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
+import com.skyfallen.goodpracticessampleapp.ui.navigation.AppNavGraph
 import com.skyfallen.goodpracticessampleapp.ui.theme.GoodPracticesSampleAppTheme
 
 class MainActivity : ComponentActivity() {
@@ -33,8 +29,6 @@ class MainActivity : ComponentActivity() {
 
     @Composable
     private fun AppNav() {
-        Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-            Text(text = "Hola", modifier = Modifier.padding(innerPadding))
-        }
+        AppNavGraph()
     }
 }
