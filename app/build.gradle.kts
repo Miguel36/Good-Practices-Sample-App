@@ -66,6 +66,10 @@ dependencies {
     //Splash
     implementation(libs.androidx.core.splashscreen)
 
+    //Retrofit
+    implementation(libs.retrofit)
+    implementation(libs.retrofit.adapter)
+
     //Test
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
