@@ -18,9 +18,10 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.skyfallen.goodpracticessampleapp.model.Character
 
 @Composable
-fun CharacterItem(character: String) {
+fun CharacterItem(character: Character) {
     Card(
         modifier = Modifier.fillMaxWidth().height(390.dp),
         shape = RoundedCornerShape(5),
