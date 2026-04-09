@@ -1,11 +1,14 @@
 package com.skyfallen.goodpracticessampleapp.model
 
+import kotlinx.serialization.Serializable
+
+@Serializable
 data class CharactersResponse(
     val items: List<Character>,
     val meta: Meta,
 )
 
-
+@Serializable
 data class Character(
     val id: Int,
     val image: String,
@@ -15,7 +18,7 @@ data class Character(
     val affiliation: String
 )
 
-
+@Serializable
 data class Meta(
     val totalItems: Int,
     val itemCount: Int,
