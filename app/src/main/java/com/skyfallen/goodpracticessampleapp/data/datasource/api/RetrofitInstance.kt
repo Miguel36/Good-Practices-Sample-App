@@ -6,12 +6,16 @@ import retrofit2.Retrofit
 import retrofit2.converter.kotlinx.serialization.asConverterFactory
 
 object RetrofitInstance {
-    private const val BASE_URL = "https://www.dragonball-api.com/api/"
+    private const val BASE_URL = "https://dragonball-api.com/api/"
+
+    private val json = Json {
+        ignoreUnknownKeys = true
+    }
 
     val api: DragonBallApiService by lazy {
         Retrofit.Builder()
             .baseUrl(BASE_URL)
-            .addConverterFactory(Json.asConverterFactory("application/json; charset=utf-8".toMediaType()))
+            .addConverterFactory(json.asConverterFactory("application/json; charset=utf-8".toMediaType()))
             .build()
             .create(DragonBallApiService::class.java)
     }
