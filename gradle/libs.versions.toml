@@ -14,6 +14,7 @@ navigationComposeVersion = "2.9.7"
 material = "1.13.0"
 kotlinSerialization = "1.10.0"
 retrofit = "3.0.0"
+coilCompose = "3.4.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -37,6 +38,8 @@ androidx-core-splashscreen = { module = "androidx.core:core-splashscreen", versi
 kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinSerialization" }
 retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit"}
 retrofit-adapter = {module = "com.squareup.retrofit2:converter-kotlinx-serialization", version.ref = "retrofit"}
+coil-compose = { module = "io.coil-kt.coil3:coil-compose", version.ref = "coilCompose" }
+coil-network-okhttp = { module = "io.coil-kt.coil3:coil-network-okhttp", version.ref = "coilCompose" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
