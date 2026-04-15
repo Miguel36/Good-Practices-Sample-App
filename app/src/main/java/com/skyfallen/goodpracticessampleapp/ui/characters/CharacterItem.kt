@@ -32,12 +32,12 @@ fun CharacterItem(character: Character) {
         Column {
             Box(Modifier.height(240.dp).fillMaxWidth().background(Color.DarkGray))
             Column(Modifier.padding(8.dp)) {
-                Text(text = "Name", fontSize = 18.sp, fontWeight = FontWeight.SemiBold)
-                Text(text = "Specie", fontSize = 14.sp)
-                Text(text = "Base Ki Desc", fontSize = 14.sp, fontWeight = FontWeight.SemiBold)
-                Text(text = "Base Ki", fontSize = 14.sp)
+                Text(text = character.name, fontSize = 18.sp, fontWeight = FontWeight.SemiBold)
+                Text(text = character.race, fontSize = 14.sp)
+                Text(text = "Base Ki", fontSize = 14.sp, fontWeight = FontWeight.SemiBold)
+                Text(text = character.ki, fontSize = 14.sp)
                 Spacer(Modifier.height(8.dp))
-                Text(text = "Affiliation", fontSize = 16.sp, fontWeight = FontWeight.SemiBold)
+                Text(text = character.affiliation, fontSize = 16.sp, fontWeight = FontWeight.SemiBold)
             }
 
         }
