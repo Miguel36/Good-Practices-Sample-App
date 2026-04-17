@@ -1,5 +1,6 @@
 package com.skyfallen.goodpracticessampleapp.data.characters.response
 
+import com.skyfallen.goodpracticessampleapp.domain.characters.entity.CharacterEntity
 import kotlinx.serialization.Serializable
 
 @Serializable
@@ -27,3 +28,14 @@ data class Meta(
     val totalPages: Int,
     val currentPage: Int
 )
+
+fun Character.toDomain(): CharacterEntity {
+    return CharacterEntity(
+        id = id,
+        image = image,
+        name = name,
+        race = race,
+        ki = ki,
+        affiliation = affiliation
+    )
+}
