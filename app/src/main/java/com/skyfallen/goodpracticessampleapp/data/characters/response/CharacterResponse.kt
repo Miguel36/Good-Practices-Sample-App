@@ -15,7 +15,8 @@ data class Character(
     val name: String,
     val race: String,
     val ki: String,
-    val affiliation: String
+    val affiliation: String,
+    val gender: String
 )
 
 @Serializable
