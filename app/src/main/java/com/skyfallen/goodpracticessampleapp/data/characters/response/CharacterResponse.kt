@@ -1,4 +1,4 @@
-package com.skyfallen.goodpracticessampleapp.model
+package com.skyfallen.goodpracticessampleapp.data.characters.response
 
 import kotlinx.serialization.Serializable
 

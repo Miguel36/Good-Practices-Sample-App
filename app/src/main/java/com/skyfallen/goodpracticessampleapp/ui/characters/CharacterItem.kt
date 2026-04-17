@@ -21,7 +21,7 @@ import androidx.compose.ui.unit.sp
 import coil3.compose.AsyncImage
 import coil3.request.ImageRequest
 import coil3.request.crossfade
-import com.skyfallen.goodpracticessampleapp.model.Character
+import com.skyfallen.goodpracticessampleapp.data.characters.response.Character
 
 @Composable
 fun CharacterItem(character: Character) {
