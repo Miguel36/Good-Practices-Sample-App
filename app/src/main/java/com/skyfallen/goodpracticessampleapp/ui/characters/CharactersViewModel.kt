@@ -3,8 +3,8 @@ package com.skyfallen.goodpracticessampleapp.ui.characters
 import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.skyfallen.goodpracticessampleapp.data.datasource.api.RetrofitInstance
-import com.skyfallen.goodpracticessampleapp.data.characters.response.Character
+import com.skyfallen.goodpracticessampleapp.domain.characters.entity.CharacterEntity
+import com.skyfallen.goodpracticessampleapp.domain.characters.usecase.GetCharacters
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.update
@@ -12,7 +12,7 @@ import kotlinx.coroutines.launch
 
 private const val PAGE_NUMBER = 1
 
-class CharactersViewModel(): ViewModel() {
+class CharactersViewModel(val getCharacters: GetCharacters): ViewModel() {
     private val _uiState = MutableStateFlow(CharactersUiState())
     val uiState: StateFlow<CharactersUiState> = _uiState
 
@@ -27,9 +27,9 @@ class CharactersViewModel(): ViewModel() {
 
             try {
                 //success
-                val response = RetrofitInstance.api.getCharacters(PAGE_NUMBER)
+                val characters = getCharacters(PAGE_NUMBER)
                 _uiState.update {
-                    it.copy(characterList = response.items, isLoading = false, error = null)
+                    it.copy(characterList = characters, isLoading = false, error = null)
                 }
             }
             catch (e: Exception) {
@@ -43,7 +43,7 @@ class CharactersViewModel(): ViewModel() {
 
 
 data class CharactersUiState(
-    val characterList: List<Character> = emptyList(),
+    val characterList: List<CharacterEntity> = emptyList(),
     val isLoading: Boolean = false,
     val error: String? = null
 )

@@ -21,10 +21,10 @@ import androidx.compose.ui.unit.sp
 import coil3.compose.AsyncImage
 import coil3.request.ImageRequest
 import coil3.request.crossfade
-import com.skyfallen.goodpracticessampleapp.data.characters.response.Character
+import com.skyfallen.goodpracticessampleapp.domain.characters.entity.CharacterEntity
 
 @Composable
-fun CharacterItem(character: Character) {
+fun CharacterItem(character: CharacterEntity) {
     Card(
         modifier = Modifier.fillMaxWidth().height(390.dp),
         shape = RoundedCornerShape(5),
