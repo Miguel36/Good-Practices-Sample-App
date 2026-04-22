@@ -5,14 +5,17 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.skyfallen.goodpracticessampleapp.domain.characters.entity.CharacterEntity
 import com.skyfallen.goodpracticessampleapp.domain.characters.usecase.GetCharacters
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
 private const val PAGE_NUMBER = 1
 
-class CharactersViewModel(val getCharacters: GetCharacters): ViewModel() {
+@HiltViewModel
+class CharactersViewModel @Inject constructor(val getCharacters: GetCharacters): ViewModel() {
     private val _uiState = MutableStateFlow(CharactersUiState())
     val uiState: StateFlow<CharactersUiState> = _uiState
 

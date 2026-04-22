@@ -9,7 +9,9 @@ import androidx.compose.runtime.Composable
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import com.skyfallen.goodpracticessampleapp.ui.navigation.AppNavGraph
 import com.skyfallen.goodpracticessampleapp.ui.theme.GoodPracticesSampleAppTheme
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     private val mainViewModel: MainViewModel by viewModels()
 
